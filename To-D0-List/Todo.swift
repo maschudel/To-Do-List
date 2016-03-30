@@ -13,7 +13,7 @@ class Todo: NSObject, NSCoding {
     
     private var _toDoItem: String =  ""
     private var _complete: Bool = false
-    private var _itemPriority: UIImage!
+    private var _itemPriority: String = ""
     private var _timeStamp = NSDate()
     
     var toDoItem: String {
@@ -27,7 +27,6 @@ class Todo: NSObject, NSCoding {
         set {
             
             self._toDoItem = newValue
-            
         }
     }
     
@@ -38,10 +37,9 @@ class Todo: NSObject, NSCoding {
             return _timeStamp
             
         }
-        
     }
 
-    var itemPriority: UIImage {
+    var itemPriority: String {
         
         get {
             
@@ -60,7 +58,6 @@ class Todo: NSObject, NSCoding {
         
         get {
             
-            
             return _complete
         }
         
@@ -73,9 +70,7 @@ class Todo: NSObject, NSCoding {
             } else {
                 
                 _complete = true
-                
             }
-            
         }
     }
     
@@ -83,7 +78,7 @@ class Todo: NSObject, NSCoding {
         
     }
     
-    init(toDoItem: String, complete: Bool, priority: UIImage) {
+    init(toDoItem: String, complete: Bool, priority: String) {
         
         _toDoItem = toDoItem
         _complete = complete
@@ -103,9 +98,8 @@ class Todo: NSObject, NSCoding {
         self.init()
         self._toDoItem = aDecoder.decodeObjectForKey("toDoItem") as! String
         self._complete = aDecoder.decodeObjectForKey("complete") as! Bool
-        self._itemPriority = aDecoder.decodeObjectForKey("itemPriority") as! UIImage
+        self._itemPriority = aDecoder.decodeObjectForKey("itemPriority") as! String
         self._timeStamp = aDecoder.decodeObjectForKey("timeStamp") as! NSDate
-    
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
@@ -114,7 +108,6 @@ class Todo: NSObject, NSCoding {
         aCoder.encodeObject(self._complete, forKey: "complete")
         aCoder.encodeObject(self._itemPriority, forKey: "itemPriority")
         aCoder.encodeObject(self._timeStamp, forKey: "timeStamp")
-        
     }
     
 }

@@ -21,25 +21,19 @@ class ToDoCell: UITableViewCell {
     @IBAction func statusChanged(sender: UISwitch){
        
         if arrToDo[doneSw.tag].complete == true {
-           
             arrToDo[doneSw.tag].complete = false
-            
         } else {
-        
             arrToDo[doneSw.tag].complete = true
-            
         }
         
         Todo().saveUserDefaults()
-        
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
-    func configureCell(item: String, complete: Bool, priority: UIImage, timestamp: NSDate) {
+    func configureCell(item: String, complete: Bool, priority: String, timestamp: NSDate) {
         
         let now = NSDate()
         let elapsedTime = now.timeIntervalSinceDate(timestamp)
@@ -48,7 +42,14 @@ class ToDoCell: UITableViewCell {
         let seconds = elapsedTime % 60.0
     
         itemTxt.text = item
-        priImg.image = priority
+        
+        if priority == "Normal" {
+            
+            priImg.image = UIImage(named: "1.png")
+        } else {
+            priImg.image = UIImage(named: "2.png")
+        }
+        
         doneSw.setOn(complete, animated: true)
         
         if hours > 48.0 {
@@ -57,24 +58,16 @@ class ToDoCell: UITableViewCell {
             timeTxt.text = String("Entered \(days) day ago")
             
             } else if (Int(hours) > 0){
-            
                 timeTxt.text = String("Entered \(Int(hours)) hours ago")
-            
             } else if (Int(minutes) > 0 ) {
-            
                 timeTxt.text = String("Entered \(Int(minutes)) minutes ago")
-            
         } else {
-            
             timeTxt.text = String("Entered \(Int(seconds)) seconds ago")
         }
-        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-
     }
 
 }

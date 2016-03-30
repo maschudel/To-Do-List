@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		492B422C1C93853F00933602 /* editTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B422B1C93853F00933602 /* editTable.swift */; };
+		490BAC511CA88F830033984E /* EditEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BAC501CA88F830033984E /* EditEntry.swift */; };
 		496BC2941C98F71E0011F4E1 /* myCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496BC2931C98F71E0011F4E1 /* myCustomButton.swift */; };
 		4971BBC61C8A5A8F0084CBAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4971BBC51C8A5A8F0084CBAF /* AppDelegate.swift */; };
 		4971BBCD1C8A5A8F0084CBAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4971BBCB1C8A5A8F0084CBAF /* Main.storyboard */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		492B422B1C93853F00933602 /* editTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editTable.swift; sourceTree = "<group>"; };
+		490BAC501CA88F830033984E /* EditEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEntry.swift; sourceTree = "<group>"; };
 		496BC2931C98F71E0011F4E1 /* myCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myCustomButton.swift; sourceTree = "<group>"; };
 		4971BBC21C8A5A8F0084CBAF /* To-D0-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-D0-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4971BBC51C8A5A8F0084CBAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +48,6 @@
 		496BC2951C98F7DC0011F4E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				492B422B1C93853F00933602 /* editTable.swift */,
 				4971BBD91C8A671A0084CBAF /* ToDoCell.swift */,
 				496BC2931C98F71E0011F4E1 /* myCustomButton.swift */,
 				496BC2971C98F9010011F4E1 /* Controller */,
@@ -68,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				4971BBC51C8A5A8F0084CBAF /* AppDelegate.swift */,
+				490BAC501CA88F830033984E /* EditEntry.swift */,
 				49CCEC5C1C8B4C1500F32253 /* toDoTable.swift */,
 				49CCEC5E1C8B5ADA00F32253 /* addItemViewController.swift */,
 			);
@@ -177,10 +177,10 @@
 			files = (
 				496BC2941C98F71E0011F4E1 /* myCustomButton.swift in Sources */,
 				4971BBC61C8A5A8F0084CBAF /* AppDelegate.swift in Sources */,
+				490BAC511CA88F830033984E /* EditEntry.swift in Sources */,
 				49CCEC5F1C8B5ADA00F32253 /* addItemViewController.swift in Sources */,
 				49CCEC5D1C8B4C1500F32253 /* toDoTable.swift in Sources */,
 				4971BBDA1C8A671A0084CBAF /* ToDoCell.swift in Sources */,
-				492B422C1C93853F00933602 /* editTable.swift in Sources */,
 				49E7B5031C8B618000A78383 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
